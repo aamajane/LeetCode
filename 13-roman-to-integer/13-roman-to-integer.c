@@ -2,36 +2,36 @@
 
 int romanToInt(char *s)
 {
-    int res = 0;
+    int total = 0;
     while (*s)
     {
         if (*s == 'C' && *(s + 1) == 'M' && s++)
-            res += 900;
+            total += 900;
         else if (*s == 'M')
-            res += 1000;
+            total += 1000;
         else if (*s == 'C' && *(s + 1) == 'D' && s++)
-            res += 400;
+            total += 400;
         else if (*s == 'D')
-            res += 500;
+            total += 500;
         else if (*s == 'X' && *(s + 1) == 'C' && s++)
-            res += 90;
+            total += 90;
         else if (*s == 'C')
-            res += 100;
+            total += 100;
         else if (*s == 'X' && *(s + 1) == 'L' && s++)
-            res += 40;
+            total += 40;
         else if (*s == 'L')
-            res += 50;
+            total += 50;
         else if (*s == 'I' && *(s + 1) == 'X' && s++)
-            res += 9;
+            total += 9;
         else if (*s == 'X')
-            res += 10;
+            total += 10;
         else if (*s == 'I' && *(s + 1) == 'V' && s++)
-            res += 4;
+            total += 4;
         else if (*s == 'V')
-            res += 5;
+            total += 5;
         else if (*s == 'I')
-            res += 1;
+            total += 1;
         s++;
     }
-    return (res);
+    return (total);
 }
