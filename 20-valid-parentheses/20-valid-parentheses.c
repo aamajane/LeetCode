@@ -2,10 +2,10 @@
 
 bool isValid(char *s)
 {
-    int len = strlen(s), j = 0;
-    if (len == 1 || len % 2)
+    int slen = strlen(s), j = 0;
+    if (slen == 1 || slen % 2)
         return (false);
-    char* stack = calloc(len + 1, sizeof(char));
+    char* stack = calloc(slen + 1, sizeof(char));
     for (int i = 0; s[i]; i++)
     {
         if (s[i] == '(' || s[i] == '{' || s[i] == '[')
