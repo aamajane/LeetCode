@@ -6,8 +6,8 @@ void rotate(int* nums, int numsSize, int k)
         return ;
     if (k > numsSize)
         k %= numsSize;
-    int* tmp = calloc(numsSize, sizeof(int));
-    memmove(tmp, nums + (numsSize - k), sizeof(int) * k);
-    memmove(tmp + k, nums, sizeof(int) * (numsSize - k));
-    memmove(nums, tmp, sizeof(int) * numsSize);
+    int* temp = calloc(numsSize, sizeof(int));
+    memmove(temp, nums + (numsSize - k), sizeof(int) * k);
+    memmove(temp + k, nums, sizeof(int) * (numsSize - k));
+    memmove(nums, temp, sizeof(int) * numsSize);
 }
