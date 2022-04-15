@@ -2,8 +2,8 @@
 
 int searchInsert(int* nums, int numsSize, int target)
 {
-    for (int index = 0; index < numsSize; index++)
-        if (nums[index] == target || nums[index] > target)
-            return (index);
+    for (int i = 0; i < numsSize; i++)
+        if (nums[i] == target || nums[i] > target)
+            return (i);
     return (numsSize);
 }
